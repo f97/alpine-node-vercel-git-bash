@@ -36,7 +36,7 @@ jobs:
       - name: Prepare
         id: prepare
         run: |
-          DOCKER_IMAGE=alrun/node-alpine-git-bash
+          DOCKER_IMAGE=alrun/node-alpine-vercel-git-bash
 
           TEMP="${{ matrix.docker-file.tags }}"
           TAGZ=($TEMP)
