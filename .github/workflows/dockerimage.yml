@@ -1,0 +1,34 @@
+name: Test Docker image
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.1.0
+
+      - name: Build the Docker image
+        run: |
+          docker run -i $(docker build -q 16) /bin/sh -c "node --version && npm --version && git --version"
+          docker run -i $(docker build -q 18) /bin/sh -c "node --version && npm --version && git --version"
+          docker run -i $(docker build -q 20) /bin/sh -c "node --version && npm --version && git --version"
+
+  auto-merge:
+    runs-on: ubuntu-latest
+    needs: build
+
+    permissions:
+      pull-requests: write
+      contents: write
+
+    steps:
+      - name: Automatically merge dependabot upgrades
+        uses: fastify/github-action-merge-dependabot@v3.9.1
+        with:
+          target: minor
