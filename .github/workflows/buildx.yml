@@ -18,16 +18,16 @@ jobs:
         docker-file:
           - path: 16
             tags: "16 latest"
-            platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x,linux/arm/v7,linux/arm/v6
+            platforms: linux/amd64,linux/arm64
           - path: 18
             tags: "18"
-            platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x,linux/arm/v7,linux/arm/v6
+            platforms: linux/amd64,linux/arm64
           - path: 20
             tags: "20"
-            platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x,linux/arm/v7,linux/arm/v6
+            platforms: linux/amd64,linux/arm64
           - path: slim
             tags: "slim"
-            platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x,linux/arm/v7,linux/arm/v6
+            platforms: linux/amd64,linux/arm64
 
     steps:
       - name: Checkout
