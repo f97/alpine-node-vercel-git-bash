@@ -17,7 +17,7 @@ jobs:
       matrix:
         docker-file:
           - path: 16
-            tags: "16 latest"
+            tags: "16"
             platforms: linux/amd64,linux/arm64
           - path: 18
             tags: "18"
@@ -26,7 +26,7 @@ jobs:
             tags: "20"
             platforms: linux/amd64,linux/arm64
           - path: slim
-            tags: "slim"
+            tags: "slim latest"
             platforms: linux/amd64,linux/arm64
 
     steps:
