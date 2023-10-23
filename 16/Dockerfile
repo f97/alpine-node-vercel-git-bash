@@ -8,4 +8,5 @@ RUN apk -U upgrade \
   && apk add --no-cache \
     git \
     bash \
+    yarn \
     && npm i -g vercel@latest
