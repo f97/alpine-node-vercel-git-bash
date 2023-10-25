@@ -8,5 +8,6 @@ RUN apk add --no-cache \
     git \
     bash \
     nodejs \
-    yarn \
-    && yarn global add vercel@latest
+    yarn \ 
+    npm \
+    && npm i -g vercel@latest
