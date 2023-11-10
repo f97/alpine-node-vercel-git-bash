@@ -24,7 +24,7 @@ jobs:
             platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
           - path: 20
             tags: "20"
-            platforms: linux/amd64,linux/arm64,linux/arm/v7
+            platforms: linux/amd64,linux/arm64
           - path: slim
             tags: "slim latest"
             platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
